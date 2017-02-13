@@ -7,6 +7,10 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
+
+
 @NgModule({
     bootstrap: [ AppComponent ],
     declarations: [
@@ -18,6 +22,7 @@ import { CounterComponent } from './components/counter/counter.component';
     ],
     imports: [
         UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
+        Ng2SmartTableModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
